@@ -11,15 +11,9 @@ gym.envs.register(
 )
 env = gym.make('MountainCarMyEasyVersion-v0')
 
-# Action space is [0, 1, 2] where: 0=move left, 1=don't move, 2=move right
-
-########################################################################################
-
-# rewards
+# Action space is [0, 1, 2] where: 0 = move left, 1 = don't move, 2 = move right
+# Rewards
 aggr_ep_rewards = {'ep': [], 'avg': [], 'min': [], 'max': [], 'total': []}
-
-
-########################################################################################
 
 
 def qlearning(q_table, episodes, show_every, gamma, save, plotheatmap, plotrewards):
