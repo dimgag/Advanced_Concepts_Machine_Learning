@@ -93,20 +93,18 @@ def qlearning(q_table, episodes, show_every, gamma, save, plotheatmap, plotrewar
         plt.show()
 
 
-######################
 # First Q-Table
 
 # q_table = np.random.uniform(low=-1, high=1, size=(50,50,env.action_space.n))
 q_table = np.zeros((100, 100, env.action_space.n))
 # print(q_table)
 
-###################
 
 # DISCRETE_OS_SIZE = [20] * len(env.observation_space.high)
 DISCRETE_OS_SIZE = [100, 100]
 discrete_os_win_size = (env.observation_space.high - env.observation_space.low) / DISCRETE_OS_SIZE
 
-# Set hyperparameters
+# Set hyperparameters you want
 episodes = 10000
 show_every = 1000
 gamma = 0.995  # discount factor
